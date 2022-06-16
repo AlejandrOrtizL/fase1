@@ -6,21 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matcha</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- comentario -->
-    <h1>Construye tu blog, construye tu neocio.</h1> 
-    <p>Artículos publicitarios instantaneos, maneja más tráfico, crece tu lista de emails y ve el impacto en ventas de tu blog.</p>
-    <form>
-        <input type="email"/>
-        <button type="submit">
-            Prueba ahora &rarr;
-        </button>
-    </form>
-    <p>Empieza a publicitar hoy con una <strong>prueba gratuita de 7 días.</strong></p>
-    <p><strong>No requiere tarjeta de crédito.</strong></p>
-    <img src= "https://ignos.blog/wp-content/uploads/2021/04/capterra.png" alt= "logo Capterra" />
-    <img src="https://getmatcha.com/wp-content/uploads/2019/09/intro_group_image.png" alt="intro group image"/>
+    <header class="header">
+        <!-- Logo con link a la página principal -->
+        <a href="/" class="logo">
+            <img src="https://getmatcha.com/wp-content/uploads/2020/01/Icon-green.png" alt="logo verde"/>
+        </a>
+        <!-- Menú de navegación -->
+        <nav class="navbar">
+            <ul>
+                <li>Plataforma</li>
+                <li>Precios</li>
+                <li>Clientes</li>
+                <li>Recursos</li>
+                <li>Acerca de</li>
+            </ul>
+        </nav>
+        <!-- Contenedor de acciones de usuario -->
+        <div class="actions">
+            <a href="">Registrarse</a>
+            <button>Empezar prueba gratis</button>
+        </div>
+    </header>
 
+    <section class="main">
+        <!-- comentario -->
+        <h1>Construye tu blog, construye tu neocio.</h1> 
+        <p>Artículos publicitarios instantaneos, maneja más tráfico, crece tu lista de emails y ve el impacto en ventas de tu blog.</p>
+        <form>
+            <input type="email"/>
+            <button type="submit">
+                Prueba ahora &rarr;
+            </button>
+        </form>
+        <p>Empieza a publicitar hoy con una <strong>prueba gratuita de 7 días.</strong></p>
+        <p><strong>No requiere tarjeta de crédito.</strong></p>
+        <img src= "https://ignos.blog/wp-content/uploads/2021/04/capterra.png" alt= "logo Capterra" />
+        <img class="image" src="https://getmatcha.com/wp-content/uploads/2019/09/intro_group_image.png" alt="intro group image"/>
+    </section>
 </body>
 </html>
