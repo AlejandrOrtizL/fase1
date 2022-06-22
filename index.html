@@ -11,28 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <!-- Logo con link a la página principal -->
-        <a href="/" class="logo">
-            <img src="https://getmatcha.com/wp-content/uploads/2020/01/Icon-green.png" alt="logo verde"/>
-        </a>
-        <!-- Menú de navegación -->
-        <nav class="navbar">
-            <ul>
-                <li>Plataforma</li>
-                <li>Precios</li>
-                <li>Clientes</li>
-                <li>Recursos</li>
-                <li>Acerca de</li>
-            </ul>
-        </nav>
-        <!-- Contenedor de acciones de usuario -->
-        <div class="actions">
-            <a href="">Registrarse</a>
-            <button>Empezar prueba gratis</button>
-        </div>
-    </header>
-
+    <!-- Este es el contenedor que envuelve a la barra de navegación -->
+     <section class="fixed-header">
+        <header class="header">
+            <!-- Logo con link a la página principal -->
+            <a href="/" class="logo">
+                <img src="https://getmatcha.com/wp-content/uploads/2020/01/Icon-green.png" alt="logo verde"/>
+            </a>
+            <!-- Menú de navegación -->
+            <nav class="navbar">
+                <ul>
+                    <li>Plataforma</li>
+                    <li>Precios</li>
+                    <li>Clientes</li>
+                    <li>Recursos</li>
+                    <li>Acerca de</li>
+                </ul>
+            </nav>
+            <!-- Contenedor de acciones de usuario -->
+            <div class="actions">
+                <a href="">Registrarse</a>
+                <button>Empezar prueba gratis</button>
+            </div>
+        </header>
+    </section>
     <section class="main">
         <!-- comentario -->
         <h1>Construye tu blog, construye tu neocio.</h1> 
@@ -48,5 +50,48 @@
         <img src= "https://ignos.blog/wp-content/uploads/2021/04/capterra.png" alt= "logo Capterra" />
         <img class="image" src="https://getmatcha.com/wp-content/uploads/2019/09/intro_group_image.png" alt="intro group image"/>
     </section>
+    <section class="promo">
+        <article class="explanatory-video">
+            <video 
+                controls
+                poster="https://cdn.videvo.net/videvo_files/video/premium/video0036/thumbnails/computer_code00_small.jpg">
+                <source
+                    type="video/mp4"
+                    src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.mp4"
+                />  
+                <source
+                    type="video/webm"
+                    src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.webm"
+                />      
+            </video>
+            <section class="arrow-text">
+                <p>Ve como trabaja</p>
+                <img 
+                    src="https://images.vexels.com/media/users/3/206269/isolated/preview/5bf110f14d50531aaca26c251c3441aa-doodle-de-flecha-vertical.png"
+                    alt="Ve como trabaja"
+                />
+            </section>
+        </article>
+        <article class="publish">
+            <h2>Publica tu blog en minutos, no en horas.</h2>
+            <p>Su blog es su activo más poderoso para construir, atraer y retener una audiencia leal. Pero no tienes horas para crear contenido que puede o no funcionar. 
+                Con Matcha, publique instantáneamente desde nuestra biblioteca de más de 10,000 artículos escritos profesionalmente y cree su lista de correo electrónico más rápido con nuestra poderosa herramienta de conversión.</p>
+            <p>Empieza a publicar hoy:</p>
+            <form>
+                <input type="email" placeholder="Introducir email">
+                <button>Empezar mi prueba</button>
+            </form>
+        </article>
+    </section>
+    <section class="accomplishment">
+        <article>
+            <h2>Las marcas de comercio electrónico en crecimiento confían en Matcha.</h2>
+            <p>
+                ¿Estás cansado de perder el tiempo publicando artículos de blog para ver solo un poco de tráfico y ningún impacto en las ventas? Únase a cientos de propietarios de 
+                negocios y vendedores de comercio electrónico que confían en Matcha para obtener contenido de calidad y un rendimiento constante de sus blogs.
+            </p>
+        </article>
+    </section>
+    
 </body>
 </html>
