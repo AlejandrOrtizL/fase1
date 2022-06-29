@@ -7,6 +7,10 @@ h1 {
   text-align: center;
 }
 
+h2, h3{
+  color: #025157;
+}
+
 p {
   color: #8b8b8bcc;
   font-family: Verdana;
@@ -21,9 +25,19 @@ button {
   border-radius: 5px;
 }
 
+a{
+  color: #67b54b;
+}
+
 
 input{
   padding: 12px 14px;
+}
+
+.banner > img{
+  max-width: 50%;
+  border: none;
+  vertical-align: middle;
 }
 
 .image{
@@ -38,11 +52,12 @@ input{
   font-family: sans-serif;
   height: 45px;
 }
-/*
-li{
+
+li > a{
   display: inline;
+  color: #025157;
 }
-*/
+
 .header > *{
   display: inline-block;
   font-size: 16px;
@@ -68,7 +83,7 @@ li{
 }
 
 .navbar{
-  width: 70%;
+  /*width: 70%;*/
   text-align: center;
   color: #025157;
   font-weight: 500;
@@ -80,7 +95,7 @@ li{
 }
 
 .actions{
-  width: 15%;
+  /*width: 15%;*/
   text-align: right;
   font-size: 14px;
   font-weight: 600;
@@ -161,7 +176,8 @@ main h1{
 }
 
 .arrow-text > p {
-  vertical-align: text-bottom;
+  /*vertical-align: text-bottom;*/
+  text-align: end;
 }
 
 .accomplishment{
@@ -171,6 +187,7 @@ main h1{
   align-content: space-around;
   /*position: relative;*/
   padding: 50px 50px 100px;
+  /*padding-bottom: 100px;*/
 }
 
 .accomplishment > button{
@@ -200,9 +217,9 @@ main h1{
   padding: 2%;
 }
 
-.stories > h3{
+/*.stories > h3{
   color: #025157;
-}
+}*/
 
 .client{
   position: relative;
@@ -235,8 +252,12 @@ main h1{
   margin: 0 15px 30px;
   background-color: #fff;
   border: 1px solid #dadada;
-  color: #67b54b;
+  color: #025157;
 }
+
+/*.feature-content > a{
+  color: #67b54b;
+}*/
 
 .feature-content{
   width: 70%;
@@ -250,4 +271,143 @@ main h1{
   /*position: relative;
   right: -50px;*/
   padding: 0;
+}
+
+.How-it-works{
+  background-color: #fffbf7;
+  width: 100%;
+  padding: 5% 10%;
+  text-align: center;
+  display: inline;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5% 5%;
+  padding: 5% 10%;
+  text-align: left;
+}
+
+.card{
+  background-color: #fff;
+  padding: 30% 5% 10% 5%;
+}
+.card > h3{
+  text-align: center;
+}
+
+@media (breakpoint) {
+  /** Aplica estilos particulares para este tamaño */
+}
+
+@media (max-width: 575px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/** dispositivos móviles en vista viewport (vertical) */
+@media (max-width: 575px) {
+  /*.navbar,.actions{
+    display: none;
+  }*/
+
+  .main{
+    margin-top: 130px;
+  }
+  
+  h1{
+    font-size: 30px;
+  }
+
+  .banner > img{
+    width: 100%;
+  }
+
+  .publish > form{
+    flex-direction: column;
+  }
+
+  .publish > form > div{
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  .publish > form > div > input{
+    width: 65%;
+  }  
+
+  .promo{
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .explanatory-video > video{
+    width: 100%;
+  }
+
+  .publish{
+    margin-top: 10px;
+  }
+
+  .publish > h2{
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .features {
+    height: 100%;
+    grid-template: repeat(4, 1fr) / 1fr;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .feature-image {
+    display: none;
+  }
+
+  .accomplishment{
+    height: 100%;
+    flex-direction: column;
+    padding: 5px 5px 10px;
+  }
+  .marks{
+    width: 90%;
+  }
+  .stories{
+    width: 90%;
+  }
+  .icon{
+    width: 30%;
+    position: absolute;
+    z-index: 0;
+    bottom: 53%;
+    right: 20%;
+  }
+  .cards{
+    grid-template: repeat(4, 1fr) / 1fr;
+    padding: 5% 0;
+    gap: 2%;
+  }
+}
+
+/** dispositivos pequeños en vista landscape (horizontal) */
+@media (min-width: 576px and max-width: 767px) {
+  ...;
+}
+
+/** dispositivos medianos (tablets) */
+@media (min-width: 768px and max-width: 991px) {
+  ...;
+}
+
+/** dispositivos grandes (desktops) */
+@media (min-width: 992px and max-width: 1199px) {
+  ...;
+}
+
+/** dispositivos extra grandes (monitores grandes, tvs) */
+@media (min-width: 1200px) {
+  ...;
 }
