@@ -7,7 +7,7 @@ h1 {
   text-align: center;
 }
 
-h2, h3{
+h2, h3, h5{
   color: #025157;
 }
 
@@ -84,6 +84,9 @@ li > a{
 
 .navbar{
   /*width: 70%;*/
+  background-color: #fffbf7;
+  display: inline;
+  z-index: 2;
   text-align: center;
   color: #025157;
   font-weight: 500;
@@ -94,9 +97,9 @@ li > a{
   margin: 0 25px;
 }
 
-.actions{
+.actions{/*nav-item
   /*width: 15%;*/
-  text-align: right;
+  text-align: center;
   font-size: 14px;
   font-weight: 600;
 }
@@ -182,7 +185,7 @@ main h1{
 
 .accomplishment{
   background-color: #a1d683;
-  display: flex;
+  display: flex;/*En vez de flex usar grid*/
   align-items: center;
   align-content: space-around;
   /*position: relative;*/
@@ -195,10 +198,10 @@ main h1{
   border: 0;
   border-radius: 5px;
 }
-
+/*
 .accomplishment > h2{
   color: #025157;
-}
+}*/
 
 .marks{
   width: 60%;
@@ -212,11 +215,26 @@ main h1{
 
 .stories{
   background-color: #fffbf7;
-  position: relative;
+  /*position: relative;*/
   width: 30%;
-  padding: 2%;
+  border: 1px solid #025157;
+  /*padding: 2%;*/
 }
-
+.card-body > a{
+  background-color: #025157;
+  padding: 12px 14px;
+  margin: 25px 0;
+}
+.card-body > div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-body > div > .img-fluid{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
 /*.stories > h3{
   color: #025157;
 }*/
@@ -224,14 +242,15 @@ main h1{
 .client{
   position: relative;
   width: 100%;
+  /*max-height: 16vw;*/
 }
 
 .icon{
   width: 30%;
   position: absolute;
   z-index: 0;
-  bottom: 33%;
-  right: 20%;
+  bottom: -5%;
+  right: 10%;
 }
 
 .features{
@@ -242,9 +261,10 @@ main h1{
   /*grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);*/
   padding: 30px 20px 40px 40px;
-  
   text-align: left;
   border-radius: 5px;
+  height: 100%;
+
 }
 
 .feature-card{
@@ -255,16 +275,13 @@ main h1{
   color: #025157;
 }
 
-/*.feature-content > a{
-  color: #67b54b;
-}*/
-
 .feature-content{
   width: 70%;
+  padding-left: 1rem;
 }
 
 .feature-image > *{
-  /*flex: 1;*/
+  /*flex: 0;*/
   width: 100%;
   height: 80%;
   align-content: center;
@@ -288,13 +305,54 @@ main h1{
   padding: 5% 10%;
   text-align: left;
 }
-
+/*
 .card{
   background-color: #fff;
   padding: 30% 5% 10% 5%;
-}
+}*/
 .card > h3{
   text-align: center;
+}
+
+.success-stories {
+  background-color: #a1d683;
+  padding: 5% 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.success-stories .overview {
+  flex: 2;
+  padding-right: 100px;
+}
+
+.success-stories .overview h2 {
+  font-family: "Alegreya", serif;
+  font-size: 51px;
+  line-height: 61px;
+  color: #025157;
+}
+
+.success-stories .overview p {
+  color: #343434;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.success-stories .overview button {
+  font-size: 14px;
+  padding: 12px 12px 6px 12px;
+  border-radius: 8px;
+  height: 45px;
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.success-stories .overview img {
+  width: 500px;
+  max-width: 100%;
 }
 
 @media (breakpoint) {
@@ -309,9 +367,10 @@ main h1{
 
 /** dispositivos móviles en vista viewport (vertical) */
 @media (max-width: 575px) {
-  /*.navbar,.actions{
-    display: none;
-  }*/
+  .navbar,.actions{
+    /*display: none;*/
+    text-align: center;
+  }
 
   .main{
     margin-top: 130px;
@@ -390,6 +449,104 @@ main h1{
     padding: 5% 0;
     gap: 2%;
   }
+
+  /* Cambiamos el alto mínimo de la tarjeta, para que se vea bien en responsive */
+.success-stories .card {
+  max-width: 370px;
+  width: 100%;
+  min-height: 600px;
+  margin: 0 auto;
+}
+
+/* Con object-fit, hacemos que la imagen se ajuste a la medida de su contenedor y limitamos su alto */
+.success-stories .card img {
+  max-height: 30vh;
+  object-fit: cover;
+}
+
+/* Agregamos position: relative para recibir un elemento con position:absolute más adelante */
+.success-stories .card .card-body {
+  max-width: 370px;
+  width: 100%;
+  position: relative;
+  padding: 40px 1rem 1rem;
+}
+
+/* Estos son los estilos para textos y acomodo de elementos */
+.success-stories .card .card-body h4 {
+  color: #025157;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 12px;
+  font-family: "Slabo 27px", serif;
+}
+
+.success-stories .card .card-body h3 {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.success-stories .card .card-body .results {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.success-stories .card .card-body .results img {
+  width: 26px;
+  margin-right: 20px;
+}
+
+.success-stories .card .card-body .results p {
+  margin: 0;
+}
+
+.success-stories .card .card-footer button {
+  display: block;
+  margin-left: 0;
+  border-radius: 5px;
+  font-size: 13;
+  font-weight: 600;
+  padding: 12px 20px;
+  width: 100%;
+  background-color: #025157;
+  color: #fff;
+  border: none;
+}
+
+.success-stories .card .card-footer {
+  background-color: #ffffff;
+  color: #fff;
+  border: none;
+}
+
+/* Aqui hacemos un círculo con CSS! Este se posicionará en el margen superior de .card-body */
+.success-stories .card .card-body .card-circle {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top:-45px;
+  right: 20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* Cada círculo tiene su propio color. Verifica qué significa este selector: .card-circle.everly */
+.success-stories .card .card-body .card-circle.everly {
+  background-color: #f9da73;
+  border: 5px solid #f9da73;
+}
+
+/* Los círculos deben recibir la imagen y ajustarla al tamaño */
+.success-stories .card .card-body .card-circle.everly img {
+  object-fit: contain;
+  width: 100%;
+}
 }
 
 /** dispositivos pequeños en vista landscape (horizontal) */
@@ -399,7 +556,10 @@ main h1{
 
 /** dispositivos medianos (tablets) */
 @media (min-width: 768px and max-width: 991px) {
-  ...;
+  .actions,
+  .navbar {
+    text-align: center;
+  }
 }
 
 /** dispositivos grandes (desktops) */
