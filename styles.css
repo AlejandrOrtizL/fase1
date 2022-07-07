@@ -1,6 +1,6 @@
 body {
     background-color: #fffbf7;
-  }
+}
   
 h1 {
   color: #46484c;
@@ -15,6 +15,7 @@ p {
   color: #8b8b8bcc;
   font-family: Verdana;
   font-size: 20px;
+  /*text-align: justify;*/
 }
 
 button {
@@ -23,6 +24,14 @@ button {
   padding: 12px 14px;
   border: 0;
   border-radius: 5px;
+}
+
+.text-button:hover{
+  background-color: #67b54b;
+}
+
+.background-button:hover{
+  background-color: blue;
 }
 
 a{
@@ -78,10 +87,6 @@ li > a{
   width: 15%;
 }
 
-.logo > img{
-  width: 15%;
-}
-
 .navbar{
   /*width: 70%;*/
   background-color: #fffbf7;
@@ -90,8 +95,17 @@ li > a{
   text-align: center;
   color: #025157;
   font-weight: 500;
+  animation-name: animationNavbar;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: 5;
 }
-
+@keyframes animationNavbar {
+  25%{background-color: cyan;}
+  50%{background-color: blue;}
+  75%{background-color: blueviolet;}
+  100%{background-color: #fffbf7;}
+}
 .navbar li{
   display: inline;
   margin: 0 25px;
@@ -115,6 +129,10 @@ li > a{
 .actions button{
   color: #fff;
   background-color: #67b54b;
+}
+
+.background-button-navbar:hover{
+  background-color: #025157;
 }
 
 .main{
@@ -168,19 +186,26 @@ main h1{
   align-items: center;
 }
 
-.explanatory-video img {
+/*.explanatory-video img {
   width: 120px;
   margin-top: 10px;
-}
+}*/
 
 .arrow-text{
   display: inline-flex;
-  vertical-align: text-bottom;
+  /*vertical-align: text-bottom;*/
+  margin-top: 20px;
 }
 
 .arrow-text > p {
-  /*vertical-align: text-bottom;*/
-  text-align: end;
+  padding-top: 40px;
+  padding-right: 10px;
+  color: #343434;
+  font-size: 40px;
+}
+.arrow-text > img{
+  width: 80px;
+  height: 80px;
 }
 
 .accomplishment{
@@ -262,7 +287,6 @@ main h1{
   grid-template-rows: repeat(2, 1fr);*/
   padding: 30px 20px 40px 40px;
   text-align: left;
-  border-radius: 5px;
   height: 100%;
 
 }
@@ -272,6 +296,7 @@ main h1{
   margin: 0 15px 30px;
   background-color: #fff;
   border: 1px solid #dadada;
+  border-radius: 5px;
   color: #025157;
 }
 
@@ -290,13 +315,18 @@ main h1{
   padding: 0;
 }
 
-.How-it-works{
+.how-it-works{
   background-color: #fffbf7;
   width: 100%;
-  padding: 5% 10%;
   text-align: center;
   display: inline;
 }
+.how-it-works > .how{
+  padding: 5% 10% 0;
+}/*
+.how-it-works > section > h2{
+  padding-top: 40px;
+}*/
 
 .cards{
   display: grid;
@@ -305,13 +335,29 @@ main h1{
   padding: 5% 10%;
   text-align: left;
 }
-/*
+
 .card{
   background-color: #fff;
   padding: 30% 5% 10% 5%;
-}*/
+}
 .card > h3{
   text-align: center;
+  margin: 10px;
+}
+
+.image-card{
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.icon-card{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 25%;
+  z-index: 1;
+  border-radius: 50%;
 }
 
 .success-stories {
@@ -374,10 +420,15 @@ main h1{
 
   .main{
     margin-top: 130px;
+    padding: 5%;
   }
   
   h1{
     font-size: 30px;
+  }
+
+  p{
+    width: 90%;
   }
 
   .banner > img{
@@ -406,6 +457,16 @@ main h1{
     width: 100%;
   }
 
+  .arrow-text > p {
+    padding-top: 40px;
+    padding-right: 10px;
+    font-size: 20px;
+  }
+  .arrow-text > img{
+    height: 60px;
+    width: 60px;
+  }
+
   .publish{
     margin-top: 10px;
   }
@@ -430,9 +491,13 @@ main h1{
     height: 100%;
     flex-direction: column;
     padding: 5px 5px 10px;
+    text-align: center;
   }
   .marks{
     width: 90%;
+  }
+  .marks > img{
+    margin: 10% 0;
   }
   .stories{
     width: 90%;
@@ -441,13 +506,13 @@ main h1{
     width: 30%;
     position: absolute;
     z-index: 0;
-    bottom: 53%;
-    right: 20%;
+    bottom: -5%;
+    right: 15%;
   }
   .cards{
     grid-template: repeat(4, 1fr) / 1fr;
-    padding: 5% 0;
-    gap: 2%;
+    padding: 5% 0 0;
+    gap: 0;
   }
 
   /* Cambiamos el alto mínimo de la tarjeta, para que se vea bien en responsive */

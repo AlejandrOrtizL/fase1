@@ -6,6 +6,19 @@
   color: #135359;
 }
 
+.logo > img {
+  width: 15%;
+  animation-name: animationLogo;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes animationLogo {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .blog {
   background-color: #ffffff;
   max-width: unset;

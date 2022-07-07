@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/** colores */
+/** fuentes */
+/** placeholders */
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+  color: #025157;
+}
+
+.navbar {
+  background-color: #fffbf7;
+  text-align: center;
+  color: #025157;
+  font-weight: 500;
+}
+.navbar ul {
+  padding: 0;
+}
+
+.actions {
+  text-align: right;
+  font-size: 14px;
+}
+.actions > * {
+  margin: 0 10px;
+}
+.actions a {
+  color: #67b54b;
+}
+.actions button {
+  background-color: #67b54b;
+  color: white;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 5px;
+}
+.actions .background-button-navbar:hover {
+  background-color: #025157;
+}
+
+h1 {
+  color: #46484c;
+  text-align: center;
+}
+
+h2, h3, h5 {
+  color: #025157;
+}
+
+p {
+  color: rgba(139, 139, 139, 0.8);
+  font-family: Verdana;
+  font-size: 20px;
+}
+
+button {
+  color: #fff;
+  background-color: #025157;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.text-button:hover {
+  background-color: #67b54b;
+}
+
+a {
+  color: #67b54b;
+}
+
+input {
+  padding: 12px 14px;
+}
+
+.banner > img {
+  max-width: 50%;
+  border: none;
+  vertical-align: middle;
+}
+
+.image {
+  max-width: 70%;
+  border: none;
+  vertical-align: middle;
+}
+
+.header {
+  margin: 40px 20px 0;
+  font-size: 0;
+  font-family: sans-serif;
+  height: 45px;
+}
+
+li > a {
+  display: inline;
+  color: #025157;
+}
+
+.header > * {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 45px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.logo {
+  width: 15%;
+}
+.logo > img {
+  width: 15%;
+  animation-name: animationLogo;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes animationLogo {
+  /*25% {transform: rotate(90deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(270deg);}*/
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  /*width: 70%;*/
+  background-color: #fffbf7;
+  display: inline;
+  z-index: 2;
+  text-align: center;
+  color: #025157;
+  font-weight: 500;
+  animation-name: animationNavbar;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: 5;
+}
+
+@keyframes animationNavbar {
+  25% {
+    background-color: cyan;
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: blueviolet;
+  }
+  100% {
+    background-color: #fffbf7;
+  }
+}
+.navbar li {
+  display: inline;
+  margin: 0 25px;
+}
+
+.actions { /*nav-item
+/*width: 15%;*/
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.actions > * {
+  margin: 0 10px;
+}
+.actions a {
+  color: #67b54b;
+}
+.actions button {
+  color: #fff;
+  background-color: #67b54b;
+}
+
+.arrow {
+  margin: 0 auto;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 35px;
+}
+.arrow .container {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 65px;
+}
+.arrow .container .animated-arrow {
+  position: absolute;
+  animation-name: up-and-down, arround;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  height: 130px;
+  width: 130px;
+}
+.arrow .container .animated-arrow img {
+  width: 130px;
+  transform: rotate(-90deg);
+}
+@keyframes up-and-down {
+  0% {
+    top: 40px; /* Aquí inicia la animación */
+  }
+  25% {
+    top: -40px; /* Este es el punto donde alcanza la mitad del límite de los 60px, moviéndose hacia abajo */
+  }
+  50% {
+    top: 40px; /* Este es el punto donde alcanza el límite de los 60px */
+  }
+  75% {
+    top: -40px; /* Este es el punto donde alcanza la mitad del límite de los 60px, moviéndose hacia arriba */
+  }
+  100% {
+    top: 40px; /* Aquí termina la animación, ubicando el elemento en el punto de inicio */
+  }
+}
+@keyframes arround {
+  from {
+    left: -270px;
+  }
+  to {
+    left: 270px;
+  }
+}
+
+/*
+.arrow {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    /*margin-bottom: 65px;
+    /*margin-top: 165px;
+
+    .animated-arrow {
+        position: absolute;
+        animation-name: up-and-down, arround;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        height: 130px;
+        width: 130px;
+
+        img {
+        width: 130px;
+        transform: rotate(-90deg);
+        }
+    }
+    @keyframes up-and-down {
+        100%{top: -60px;}
+    }
+    @keyframes arround {
+        from {left: -270px;}
+        to {left: 270px;}
+    }
+}*/
+.top-features {
+  padding: 30px 0 65px;
+  margin-top: 150px;
+}
+.top-features .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.top-features .section-title h1 {
+  color: #025157;
+  font-family: "Alegreya", serif;
+  font-weight: 700;
+}
+.top-features .feature__img img {
+  width: 100%;
+}
+.top-features .feature__title__anchor {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-size: 24px;
+}
+.top-features .feature__title__anchor .feature__title {
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 35px;
+  text-decoration: none;
+  color: inherit;
+  text-shadow: #025157 1px 1px 2px;
+  transition: color 0.3s ease-in-out;
+  transition: font-size 3s;
+}
+.top-features .feature__title__anchor .feature__title:hover {
+  color: #67b54b;
+  font-size: 30px;
+}
+
+@media (max-width: 575px) {
+  .navbar, .actions {
+    text-align: center;
+  }
+  main {
+    margin-top: 85px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    width: 90%;
+  }
+  .logo > img {
+    width: 100%;
+  }
+  @keyframes arround {
+    from {
+      left: -width;
+    }
+    to {
+      left: width;
+    }
+  }
+}
+
+/*# sourceMappingURL=aboutUsOutput.css.map */

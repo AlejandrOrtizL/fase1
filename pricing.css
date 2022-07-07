@@ -36,6 +36,15 @@ body {
 
 .logo>img {
     width: 15%;
+    animation-name: animationLogo;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes animationLogo {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .navbar {
@@ -79,6 +88,9 @@ body {
     border: 0;
     border-radius: 5px;
 }
+.background-button-navbar:hover{
+    background-color: #025157;
+}
 
 .platforms{
     /*align-content: center;
@@ -111,3 +123,25 @@ body {
   .faq .card .card-body a {
     color: #6abf4b;
   }
+
+@media (max-width: 575px) {
+    .navbar,.actions{
+      text-align: center;
+    }
+    
+    main{
+        margin-top: 85px;
+    }
+
+    h1{
+      font-size: 30px;
+    }
+  
+    p{
+        width: 90%;
+    }
+
+    .logo > img{
+      width: 100%;
+    }
+}
